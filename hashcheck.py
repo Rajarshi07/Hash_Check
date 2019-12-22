@@ -1,9 +1,18 @@
 #!/usr/bin/python
 
-#put script in same folder as file to be checked.
+#put script in same folder as file to be checked or enter full path to file in place of filename.extension 
+
 #pass md5 sha1 as command line arguments.
-#python hashchk filename.extension md5_hash_value sha1_hash_value
-#if md5 hash is not available put 0 in place of md5 hash.
+#python hashcheck.py filename.extension md5_hash_value sha1_hash_value
+
+#if md5 hash is not available put 0 in place of md5 hash and enter value of sha1 hash to be checked.
+#python hashcheck.py filename.extension 0 sha1_hash_value
+
+#if sha1 hash is not available put md5 hash and keep value of sha1 hash blank.
+#python hashcheck.py filename.extension md5_hash_value
+
+#if no hash is available, just enter filename.
+#python hashcheck.py filename.extension
 
 import sys
 import hashlib
